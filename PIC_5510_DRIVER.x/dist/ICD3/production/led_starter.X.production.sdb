@@ -1,0 +1,175 @@
+[p GLOBOPT AUTOSTATIC IEEE_DBL IEEE_FLT PIC14 PIC14E ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16LF1508 ]
+[d frameptr 6 ]
+"10 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"4 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+"40 C:\Users\shuler18\Desktop\pic_c\led_starter.X\lcd_display.c
+[v _main main `(v  1 e 1 0 ]
+"64
+[v _sendLCDcmd sendLCDcmd `(v  1 e 1 0 ]
+"83
+[v _init_5510 init_5510 `(v  1 e 1 0 ]
+"105
+[v _fill_lcd fill_lcd `(v  1 e 1 0 ]
+"121
+[v _set_xy set_xy `(v  1 e 1 0 ]
+"21 C:\Users\shuler18\Desktop\pic_c\led_starter.X\SPI_comms.c
+[v _SPI_init_master SPI_init_master `(v  1 e 1 0 ]
+"48
+[v _SPI_write_data SPI_write_data `(v  1 e 1 0 ]
+[s S105 . 1 `uc 1 TRISA0 1 0 :1:0 
+`uc 1 TRISA1 1 0 :1:1 
+`uc 1 TRISA2 1 0 :1:2 
+`uc 1 TRISA3 1 0 :1:3 
+`uc 1 TRISA4 1 0 :1:4 
+`uc 1 TRISA5 1 0 :1:5 
+]
+"1056 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16lf1508.h
+[u S112 . 1 `S105 1 . 1 0 ]
+[v _TRISAbits TRISAbits `VES112  1 e 1 @140 ]
+[s S69 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 TRISB4 1 0 :1:4 
+`uc 1 TRISB5 1 0 :1:5 
+`uc 1 TRISB6 1 0 :1:6 
+`uc 1 TRISB7 1 0 :1:7 
+]
+"1105
+[u S75 . 1 `S69 1 . 1 0 ]
+[v _TRISBbits TRISBbits `VES75  1 e 1 @141 ]
+[s S84 . 1 `uc 1 TRISC0 1 0 :1:0 
+`uc 1 TRISC1 1 0 :1:1 
+`uc 1 TRISC2 1 0 :1:2 
+`uc 1 TRISC3 1 0 :1:3 
+`uc 1 TRISC4 1 0 :1:4 
+`uc 1 TRISC5 1 0 :1:5 
+`uc 1 TRISC6 1 0 :1:6 
+`uc 1 TRISC7 1 0 :1:7 
+]
+"1147
+[u S93 . 1 `S84 1 . 1 0 ]
+[v _TRISCbits TRISCbits `VES93  1 e 1 @142 ]
+[s S171 . 1 `uc 1 SCS 1 0 :2:0 
+`uc 1 . 1 0 :1:2 
+`uc 1 IRCF 1 0 :4:3 
+]
+"1553
+[s S175 . 1 `uc 1 SCS0 1 0 :1:0 
+`uc 1 SCS1 1 0 :1:1 
+`uc 1 . 1 0 :1:2 
+`uc 1 IRCF0 1 0 :1:3 
+`uc 1 IRCF1 1 0 :1:4 
+`uc 1 IRCF2 1 0 :1:5 
+`uc 1 IRCF3 1 0 :1:6 
+]
+[u S183 . 1 `S171 1 . 1 0 `S175 1 . 1 0 ]
+[v _OSCCONbits OSCCONbits `VES183  1 e 1 @153 ]
+"1691
+[v _ADCON0 ADCON0 `VEuc  1 e 1 @157 ]
+"2537
+[v _ANSELA ANSELA `VEuc  1 e 1 @396 ]
+[s S200 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 ANSB4 1 0 :1:4 
+`uc 1 ANSB5 1 0 :1:5 
+]
+"2600
+[s S204 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 ANSB 1 0 :4:4 
+]
+[u S207 . 1 `S200 1 . 1 0 `S204 1 . 1 0 ]
+[v _ANSELBbits ANSELBbits `VES207  1 e 1 @397 ]
+"3218
+[v _SSP1BUF SSP1BUF `VEuc  1 e 1 @529 ]
+[s S48 . 1 `uc 1 BF 1 0 :1:0 
+`uc 1 UA 1 0 :1:1 
+`uc 1 R_nW 1 0 :1:2 
+`uc 1 S 1 0 :1:3 
+`uc 1 P 1 0 :1:4 
+`uc 1 D_nA 1 0 :1:5 
+`uc 1 CKE 1 0 :1:6 
+`uc 1 SMP 1 0 :1:7 
+]
+"3354
+[u S57 . 1 `S48 1 . 1 0 ]
+[v _SSP1STATbits SSP1STATbits `VES57  1 e 1 @532 ]
+[s S22 . 1 `uc 1 SSPM0 1 0 :1:0 
+`uc 1 SSPM1 1 0 :1:1 
+`uc 1 SSPM2 1 0 :1:2 
+`uc 1 SSPM3 1 0 :1:3 
+`uc 1 CKP 1 0 :1:4 
+`uc 1 SSPEN 1 0 :1:5 
+`uc 1 SSPOV 1 0 :1:6 
+`uc 1 WCOL 1 0 :1:7 
+]
+"3483
+[s S31 . 1 `uc 1 SSPM 1 0 :4:0 
+]
+[u S33 . 1 `S22 1 . 1 0 `S31 1 . 1 0 ]
+[v _SSP1CON1bits SSP1CON1bits `VES33  1 e 1 @533 ]
+"10497
+[v _LATA4 LATA4 `VEb  1 e 0 @2148 ]
+"10500
+[v _LATA5 LATA5 `VEb  1 e 0 @2149 ]
+"10506
+[v _LATB5 LATB5 `VEb  1 e 0 @2157 ]
+"11706
+[v _SCS1 SCS1 `VEb  1 e 0 @1225 ]
+"40 C:\Users\shuler18\Desktop\pic_c\led_starter.X\lcd_display.c
+[v _main main `(v  1 e 1 0 ]
+{
+"59
+} 0
+"121
+[v _set_xy set_xy `(v  1 e 1 0 ]
+{
+[v set_xy@x x `uc  1 a 1 wreg ]
+[v set_xy@x x `uc  1 a 1 wreg ]
+[v set_xy@y y `uc  1 p 1 2 ]
+"123
+[v set_xy@x x `uc  1 a 1 3 ]
+"125
+} 0
+"83
+[v _init_5510 init_5510 `(v  1 e 1 0 ]
+{
+"98
+} 0
+"64
+[v _sendLCDcmd sendLCDcmd `(v  1 e 1 0 ]
+{
+[v sendLCDcmd@cmd cmd `uc  1 a 1 wreg ]
+[v sendLCDcmd@cmd cmd `uc  1 a 1 wreg ]
+"66
+[v sendLCDcmd@cmd cmd `uc  1 a 1 1 ]
+"68
+} 0
+"105
+[v _fill_lcd fill_lcd `(v  1 e 1 0 ]
+{
+[v fill_lcd@wb wb `uc  1 a 1 wreg ]
+"107
+[v fill_lcd@j j `i  1 a 2 5 ]
+[v fill_lcd@i i `i  1 a 2 3 ]
+"105
+[v fill_lcd@wb wb `uc  1 a 1 wreg ]
+"108
+[v fill_lcd@wb wb `uc  1 a 1 2 ]
+"116
+} 0
+"48 C:\Users\shuler18\Desktop\pic_c\led_starter.X\SPI_comms.c
+[v _SPI_write_data SPI_write_data `(v  1 e 1 0 ]
+{
+[v SPI_write_data@dat dat `uc  1 a 1 wreg ]
+[v SPI_write_data@dat dat `uc  1 a 1 wreg ]
+"50
+[v SPI_write_data@dat dat `uc  1 a 1 0 ]
+"54
+} 0
+"21
+[v _SPI_init_master SPI_init_master `(v  1 e 1 0 ]
+{
+"44
+} 0
