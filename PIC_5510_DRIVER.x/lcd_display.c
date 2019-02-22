@@ -177,6 +177,12 @@ void set_pixel(char x, char y, char data)
 void draw_rectangle(char length, char width, int thickness)
 {
 	int i, j;
-	set_x(x);
+	int y = width - '0';
+	int x = height - '0';
+	int start_y = (y / 2) % 8; //convert y value to starting col number
+	
+	
+	//start with drawing V line
+	
 	
 }
