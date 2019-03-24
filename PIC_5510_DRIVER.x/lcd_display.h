@@ -30,7 +30,6 @@ void fill_lcd(char wb);
 void set_xy(char x, char y);
 void set_x(char x);
 void set_y(char y);
-void draw_rectangle(char length, char width, int thickness);
 void init_5510(void);
 
 #endif	/* LCD_DISPLAY_H */

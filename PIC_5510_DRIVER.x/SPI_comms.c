@@ -24,8 +24,7 @@ void SPI_init_master(void)
     SSP1CON1bits.SSPEN = 1; //enable serial port for SPI
     SSP1CON1bits.SSPM = 0x0; //assert dominance and set sck=Fosc/4 
     SSP1CON1bits.CKP = 0; //set idle mode of clk to be low
-    SSP1STATbits.SMP = 1; //testing this to see if it outputs
-    SSP1STATbits.CKE = 0; //trasmit data on rising edge of clk
+    SSP1STATbits.CKE = 1; //trasmit data on falling edge, LCD won't work otherwise
     
     //set TRIS bits to configure spi mode
     TRISBbits.TRISB4 = 1; //SDI
