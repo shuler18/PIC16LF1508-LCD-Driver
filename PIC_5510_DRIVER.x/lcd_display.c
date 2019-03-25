@@ -41,18 +41,21 @@
 #include "gol.h" //GOL demo function headers
 
 void main(void) {
+    
     //OSCCONbits.IRCF=0x00; //start lf 31khz clk
     OSCCONbits.IRCF=0x0E; //start 8MHZ clock for GOL
     SCS1 = 1; //using internal oscillator block
-    ANSELBbits.ANSB5=0; //set reset pin to be digital
-    TRISBbits.TRISB5 = 0; //set reset pin to be output
     RST=1; //make sure reset is high at the start of execution
+    
+    //io configuration
+    init_io();
     
     //init MSSP and LCD
     SPI_init_master();
     init_5510();
     set_xy(0,0);
     fill_lcd(0);
+    
     //fun stuff:
     print_board();
     __delay_ms(2000);
@@ -65,6 +68,21 @@ void main(void) {
 
 
 // ******************* init and utility functions ******************* //
+
+void init_io()
+{
+    ANSELBbits.ANSB5=0; //set reset pin to be digital
+    TRISBbits.TRISB5 = 0; //set reset pin to be output
+    
+    ANSELCbits.ANSC2 = 1; //set thermistor pin to be analog input
+    TRISCbits.TRISC2 = 1; //set c2 to be input
+    
+    ADCON0bits.ADON  = 1; //enable ADC
+    ADCON1bits.ADCS = 0; //adc clock = Fosc/2
+    ADCON0bits.CHS = 0x6; //select input channel AN6
+    
+    
+}
 
 /*
  * Function to send LCD commands to LCD via SPI bus
@@ -185,7 +203,6 @@ unsigned long copy_board = 0b0011100010000000;
 void evolve()
 {
 	short x, y, count;
-    unsigned long test;
 	for(x = 0; x < 5; x++)
 	{
 		for(y = 0; y < 5; y++)

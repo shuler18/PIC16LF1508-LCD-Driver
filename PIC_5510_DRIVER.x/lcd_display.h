@@ -31,6 +31,6 @@ void set_xy(char x, char y);
 void set_x(char x);
 void set_y(char y);
 void init_5510(void);
-
+void init_io(void);
 #endif	/* LCD_DISPLAY_H */
 
