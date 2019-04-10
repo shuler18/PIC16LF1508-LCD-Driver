@@ -19,18 +19,22 @@ extern "C" {
 }
 #endif
 
+#include <xc.h>
+#include "SPI_comms.h"
+
 #define RST LATB5
+//#define _XTAL_FREQ 32000 //32kHz, default low power mode 
+#define _XTAL_FREQ 8000000 //8MHz, uncomment for GOL
 
 //function headers
 void sendLCDcmd(char cmd);
 void sendLCDdata(char data);
 void sendLCDstring(char *str);
-void set_pixel(char x, char y, char data);
 void fill_lcd(char wb);
 void set_xy(char x, char y);
-void set_x(char x);
-void set_y(char y);
 void init_5510(void);
 void init_io(void);
+char* itoa(int num, char* str);
+void read_temp(void);
 #endif	/* LCD_DISPLAY_H */
 
